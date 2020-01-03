@@ -14,12 +14,72 @@ body {
     background-size: 80%; */
 }
 
-body h1{
+body h1 {
     font-family: 'Roboto', sans-serif;
     font-weight: lighter;
     font-style: italic;
-    margin-top: 50px;
+    margin-top: 20px;
     font-size: 24px;
+    z-index: 3;
+}
+
+p {
+    color: white;
+    font-size: 0.8em;
+    opacity: 0.75;
+}
+
+.fadein img {
+    object-fit: contain;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    -webkit-animation-name: fade;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-duration: 15s;
+    animation-name: fade;
+    animation-iteration-count: infinite;
+    animation-duration: 15s;
+    filter: opacity(85%);
+}
+
+@-webkit-keyframes fade {
+    0% {opacity: 0;}
+    20% {opacity: 1;}
+    21% {opacity: 1;}
+    35% {opacity: 0;}
+    100% {opacity: 0;}
+}
+@keyframes fade {
+    0% {opacity: 0;}
+    20% {opacity: 1;}
+    21% {opacity: 1;}
+    35% {opacity: 0;}
+    100% {opacity: 0;}
+}
+
+#f1 {
+    
+}
+
+#f2 {
+    -webkit-animation-delay: -3s;
+}
+
+#f3 {
+    -webkit-animation-delay: -6s;
+}
+
+#f4 {
+    -webkit-animation-delay: -9s;
+} 
+ 
+#f5 {
+    -webkit-animation-delay: -12s;
 }
 
 .clock {
@@ -29,6 +89,7 @@ body h1{
     display: flex;
     justify-content: center;
     position: relative;
+    z-index: 3;
 }
 
 .clock__second,
@@ -77,7 +138,7 @@ body h1{
 
 .clock__indicator:nth-of-type(5n) {
     opacity: 1;
-    height: 93px;
+    height: 98px;
     border-top: 7px solid #f4eed7;
 }
 
@@ -88,7 +149,7 @@ body h1{
     border-radius: 3px;
     position: absolute;
     z-index: 4;
-    top: 97px;
+    top: 98px;
 }
 
 section:nth-of-type(1) {
